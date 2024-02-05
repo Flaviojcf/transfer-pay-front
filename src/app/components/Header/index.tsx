@@ -6,7 +6,7 @@ import { CustomButton } from '../CustomButton'
 
 export function Header() {
   return (
-    <div className="flex items-center px-8 justify-between w-full h-20 bg-white">
+    <div className="flex items-center px-8 justify-between w-full h-20 bg-white ">
       <div>
         <Link href="/">
           <Image
@@ -17,7 +17,7 @@ export function Header() {
           ></Image>
         </Link>
       </div>
-      <ul className="flex items-center justify-between  space-x-14">
+      <ul className="flex items-center justify-between space-x-14 ">
         {NavItensLinks.map((item) => (
           <li key={`label-${item.label}`}>
             <NavItem href={item.href} label={item.label} />

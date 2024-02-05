@@ -6,7 +6,7 @@ import { MoveRight } from 'lucide-react'
 export default function Home() {
   return (
     <div>
-      <section className="flex items-center bg-customGray h-[750px] justify-between w-full">
+      <section className="flex items-center bg-customGray h-[750px] justify-between w-full ">
         <div className="flex flex-col space-y-12 w-1/2 pl-64">
           <h1 className="flex flex-wrap text-6xl text-[rgb(56, 50, 39)] font-bold ">
             Muda pro PicPay e dê mais pique pro seu dinheiro
@@ -27,7 +27,7 @@ export default function Home() {
 
       <section className="flex w-full pl-52 -mt-14 h-96 ">
         <div className="flex items-center bg-[rgb(35,134,98)] w-full pl-14 space-x-14">
-          <div className="w-96 border border-red-500">
+          <div className="w-96 ">
             <Image
               src="/card.webp"
               width={400}
@@ -36,7 +36,7 @@ export default function Home() {
             ></Image>
           </div>
 
-          <div className="flex flex-col space-y-8 border border-red-500 h-64 max-w-[680px]">
+          <div className="flex flex-col space-y-6  h-64 max-w-[680px]">
             <h1 className="flex flex-wrap text-white text-5xl font-bold">
               PicPay Card: mais pique para suas compras
             </h1>
@@ -44,11 +44,26 @@ export default function Home() {
               O cartão de débito, crédito e com limite garantido do PicPay. Com
               zero anuidade e muitas vantagens.
             </h2>
+            <CustomButton className="w-60 h-10 border-2 border-white rounded-lg text-white font-bold hover:opacity-65">
+              Pedir cartão de crédito
+            </CustomButton>
           </div>
         </div>
       </section>
 
-      <section className="h-96 bg-[black]"></section>
+      <section className="flex items-center h-[590px] bg-white mt-20 pl-52 w-full justify-between">
+        <div className="flex flex-col space-y-4">
+          <h1>Conta com o melhor rendimento do Brasil</h1>
+          <h2>
+            Com PicPay, você facilita a sua vida, investindo, recebendo e
+            pagando o que quiser de um só lugar, de forma segura e gratuita.
+          </h2>
+          <CustomButton className="w-60 h-10 border-2 border-emerald-700 rounded-lg text-emerald-700  font-bold hover:opacity-65">
+            Abrir conta PicPay
+          </CustomButton>
+        </div>
+        <div>sasa</div>
+      </section>
     </div>
   )
 }
