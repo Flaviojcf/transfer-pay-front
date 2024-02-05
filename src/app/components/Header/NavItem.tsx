@@ -5,7 +5,7 @@ import { ArrowUpRightFromSquare, Github, Linkedin } from 'lucide-react'
 export function NavItem({ href, label }: INavItem) {
   return (
     <Link href={href} className="flex items-center" target="blank">
-      <span className="flex items-center gap-2 text-lg text-black text-bold hover:opacity-40 transition-all ease-in-out">
+      <span className="flex items-center gap-2 text-lg text-black font-bold text-bold hover:opacity-40 transition-all ease-in-out">
         {label === 'Linkedin' ? (
           <Linkedin size={20} />
         ) : label === 'Github' ? (

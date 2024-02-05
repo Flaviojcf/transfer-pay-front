@@ -13,7 +13,7 @@ export function Header() {
             src="/picpayHeaderLogo2.png"
             alt="picpay logo"
             width={140}
-            height={140}
+            height={40}
           ></Image>
         </Link>
       </div>
@@ -25,8 +25,11 @@ export function Header() {
         ))}
       </ul>
       <div className="flex items-center justify-between space-x-12">
-        <Link href="/login" className="text-emerald-800 text-lg underline">
-          <CustomButton className="border-none w-44 h-12 hover:bg-emerald-100 rounded-lg hover:bg-opacity-45">
+        <Link href="/login" className="">
+          <CustomButton
+            className="text-emerald-800 font-bold 
+          text-lg border-none w-44 h-12 hover:bg-emerald-100 rounded-lg hover:bg-opacity-45 underline"
+          >
             Área do Cliente
           </CustomButton>
         </Link>
