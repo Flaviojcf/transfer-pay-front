@@ -1,11 +1,19 @@
+'use client'
+
 import Image from 'next/image'
-import { Header } from './components/Header'
 import { CustomButton } from './components/CustomButton'
 import { MoveRight } from 'lucide-react'
+import { SectionItens } from '@/mock/sectionItens'
+import { ItemSection } from './components/ItemSection'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
-    <div>
+    <div className="mb-10">
       <section className="flex items-center bg-customGray h-[750px] justify-between w-full ">
         <div className="flex flex-col space-y-12 w-1/2 pl-64">
           <h1 className="flex flex-wrap text-6xl text-[rgb(56, 50, 39)] font-bold ">
@@ -51,10 +59,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex items-center h-[590px] bg-white mt-20 pl-52 w-full justify-between">
-        <div className="flex flex-col space-y-4">
-          <h1>Conta com o melhor rendimento do Brasil</h1>
-          <h2>
+      <section
+        className="flex items-center bg-white mt-16 pl-52 w-full justify-between  
+        2xl:justify-normal 2xl:gap-16
+        lg:flex-col lg:pl-0 lg:items-center"
+      >
+        <div className="flex flex-col space-y-4 w-1/2 ">
+          <h1 className="text-5xl font-bold max-w-[500px]">
+            Conta com o melhor rendimento do Brasil
+          </h1>
+          <h2 className="text-lg max-w-[500px]">
             Com PicPay, você facilita a sua vida, investindo, recebendo e
             pagando o que quiser de um só lugar, de forma segura e gratuita.
           </h2>
@@ -62,7 +76,22 @@ export default function Home() {
             Abrir conta PicPay
           </CustomButton>
         </div>
-        <div>sasa</div>
+
+        <ul
+          className="flex flex-wrap w-1/2 gap-8
+        2xl:justify-center
+        lg:w-full"
+        >
+          {SectionItens.map((item) => (
+            <li key={`item-${item.title}`} className="list-none ">
+              <ItemSection
+                description={item.description}
+                image={item.image}
+                title={item.title}
+              />
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   )
