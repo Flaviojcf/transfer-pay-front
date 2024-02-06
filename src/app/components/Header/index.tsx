@@ -42,7 +42,7 @@ export function Header() {
         </Link>
       </div>
 
-      <div className="lg:flex">
+      <div className="hidden lg:flex">
         <Menu />
       </div>
     </div>
