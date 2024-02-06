@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { NavItem } from './NavItem'
 import { CustomButton } from '../CustomButton'
+import { Menu } from 'lucide-react'
 
 export function Header() {
   return (
@@ -17,14 +18,16 @@ export function Header() {
           ></Image>
         </Link>
       </div>
-      <ul className="flex items-center justify-between space-x-14 ">
+
+      <ul className="flex items-center justify-between space-x-14 lg:hidden">
         {NavItensLinks.map((item) => (
           <li key={`label-${item.label}`}>
             <NavItem href={item.href} label={item.label} />
           </li>
         ))}
       </ul>
-      <div className="flex items-center justify-between space-x-12">
+
+      <div className="flex items-center justify-between space-x-12 lg:hidden">
         <Link href="/login" className="">
           <CustomButton
             className="text-emerald-800 font-bold 
@@ -37,6 +40,10 @@ export function Header() {
         <Link href="/register">
           <CustomButton>Cadastre-se</CustomButton>
         </Link>
+      </div>
+
+      <div className="lg:flex">
+        <Menu />
       </div>
     </div>
   )
