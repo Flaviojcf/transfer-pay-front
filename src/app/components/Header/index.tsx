@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { NavItem } from './NavItem'
 import { CustomButton } from '../CustomButton'
 import { Menu } from 'lucide-react'
+import { MenuComponent } from './MenuComponent'
 
 export function Header() {
   return (
@@ -43,7 +44,7 @@ export function Header() {
       </div>
 
       <div className="hidden lg:flex">
-        <Menu />
+        <MenuComponent />
       </div>
     </div>
   )

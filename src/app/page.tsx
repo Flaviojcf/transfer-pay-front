@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         <div
-          className="flex w-1/2 overflow-hidden
+          className="flex w-1/2 overflow-hidden sm:mt-12 
            lg:w-full"
         >
           <Image src="/image.webp" width={952} height={750} alt="Picpay Ad" />
