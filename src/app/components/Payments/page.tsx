@@ -13,9 +13,9 @@ export default async function Page() {
   const data = await getUsers()
 
   return (
-    <section className="flex items-center justify-center w-full px-16">
+    <section className="flex items-center justify-center w-full px-12 ">
       <div className="container">
-        <h1 className="mb-6 text-3xl font-bold">All Users</h1>
+        <h1 className="mb-6 text-3xl font-bold">Transações</h1>
         <DataTable columns={columns} data={data} />
       </div>
     </section>

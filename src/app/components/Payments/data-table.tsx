@@ -66,12 +66,20 @@ export function DataTable<TData, TValue>({
       {/* Filters */}
 
       <div className="flex items-center justify-between">
-        <div className="flex items-center py-4">
+        <div className="flex items-center py-4 gap-6">
           <Input
-            placeholder="Search by name..."
+            placeholder="Filtar pelo nome..."
             value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
             onChange={(event) =>
               table.getColumn('name')?.setFilterValue(event.target.value)
+            }
+            className="max-w-sm"
+          />
+          <Input
+            placeholder="Filtrar pelo email..."
+            value={(table.getColumn('email')?.getFilterValue() as string) ?? ''}
+            onChange={(event) =>
+              table.getColumn('email')?.setFilterValue(event.target.value)
             }
             className="max-w-sm"
           />
@@ -81,10 +89,10 @@ export function DataTable<TData, TValue>({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
-              Columns
+              Selecionar Colunas
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          <DropdownMenuContent align="end" className="bg-black text-white">
             {table
               .getAllColumns()
               .filter((column) => column.getCanHide())
@@ -92,7 +100,7 @@ export function DataTable<TData, TValue>({
                 return (
                   <DropdownMenuCheckboxItem
                     key={column.id}
-                    className="capitalize"
+                    className="capitalize cursor-pointer"
                     checked={column.getIsVisible()}
                     onCheckedChange={(value) =>
                       column.toggleVisibility(!!value)
