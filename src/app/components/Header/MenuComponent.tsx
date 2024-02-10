@@ -22,7 +22,7 @@ export function MenuComponent() {
       <AnimatePresence>
         {isOpen && (
           <DropdownMenu.Content
-            className="h-[269px] -mt-12 mr-1"
+            className="h-[269px] -mt-12 mr-1 z-50"
             asChild
             forceMount
           >
@@ -46,8 +46,8 @@ export function MenuComponent() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start gap-4 ">
-                <Link href="/login" className="">
+              <div className="flex flex-col items-start gap-4">
+                <Link href="/login">
                   <CustomButton
                     className="text-emerald-800 font-bold 
           text-base border-none h-12 hover:bg-emerald-100 rounded-lg hover:bg-opacity-45 underline"
