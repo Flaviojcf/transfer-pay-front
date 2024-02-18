@@ -65,7 +65,7 @@ export function DataTable<TData, TValue>({
     <>
       {/* Filters */}
 
-      <div className="flex items-center justify-between text-white">
+      <div className="flex items-center justify-between text-white lg:gap-4">
         <div className="flex items-center py-4 gap-6">
           <Input
             placeholder="Filtar pelo nome..."

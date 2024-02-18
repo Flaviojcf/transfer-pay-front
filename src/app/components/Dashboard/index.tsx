@@ -32,7 +32,7 @@ export function Dashboard() {
 
   return (
     <motion.nav
-      className="relative bg-emerald-700 h-96 w-[300px] overflow-hidden rounded-md mb-auto mt-6"
+      className="relative bg-emerald-700 h-96 w-[300px] overflow-hidden rounded-md mb-auto mt-6 lg:self-start lg:mb-4"
       initial={{ width: 300, opacity: 1 }}
       animate={controls}
     >
