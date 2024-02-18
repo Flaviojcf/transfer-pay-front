@@ -14,8 +14,10 @@ export default async function Page() {
 
   return (
     <section className="flex items-center justify-center w-full px-12 ">
-      <div className="container">
-        <h1 className="mb-6 text-3xl font-bold">Transações</h1>
+      <div className="container min-h-[780px]">
+        <h1 className="mb-6 text-3xl font-bold text-white text-center">
+          Transações
+        </h1>
         <DataTable columns={columns} data={data} />
       </div>
     </section>

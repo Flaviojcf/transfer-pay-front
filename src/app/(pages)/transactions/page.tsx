@@ -1,9 +1,14 @@
 import Page from '@/app/components/Payments/page'
+import TransactionLayout from './layout'
+import { Dashboard } from '@/app/components/Dashboard'
 
-export default function Teste() {
+export default function Transactions() {
   return (
-    <div className="flex h-full border border-black lg:pt-12 mb:12">
-      <Page />
-    </div>
+    <TransactionLayout>
+      <div className="flex items-center h-screen lg:pt-12 mb:12 ">
+        <Dashboard />
+        <Page />
+      </div>
+    </TransactionLayout>
   )
 }
